@@ -1,7 +1,7 @@
 package pattern.creational.factory;
 
 import main.color.Paint;
-import main.shape.Type;
+import main.shape.Draw;
 
 /**
  * Created by sylhare in 2017.
@@ -14,14 +14,14 @@ public class AbstractFactoryDemo{
         //get shape factory
         AbstractFactory shapeFactory = FactoryProducer.getFactory("SHAPE");
 
-        Type shape1 = shapeFactory.getShape("CIRCLE");
-        shape1.type();
+        Draw shape1 = shapeFactory.getShape("CIRCLE");
+        shape1.draw();
 
-        Type shape2 = shapeFactory.getShape("RECTANGLE");
-        shape2.type();
+        Draw shape2 = shapeFactory.getShape("RECTANGLE");
+        shape2.draw();
 
-        Type shape3 = shapeFactory.getShape("SQUARE");
-        shape3.type();
+        Draw shape3 = shapeFactory.getShape("SQUARE");
+        shape3.draw();
 
         //get color factory
         AbstractFactory colorFactory = FactoryProducer.getFactory("COLOR");

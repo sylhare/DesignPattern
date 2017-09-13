@@ -11,7 +11,7 @@ public class BridgeDemo {
         Shape ball = new Circle(100,100, 10, new Ball());
         Shape bubble = new Circle(100,100, 10, new Bubble());
 
-        ball.draw();
-        bubble.draw();
+        ball.doodle();
+        bubble.doodle();
     }
 }

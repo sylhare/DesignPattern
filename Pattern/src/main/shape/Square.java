@@ -1,14 +1,14 @@
 package main.shape;
 
-public class Square extends Shape implements Type {
+public class Square extends Shape implements Draw {
 
     public Square() {
         edge = 4;
     }
 
     @Override
-    public void type() {
-        System.out.println("Inside Square::type() method.");
+    public void draw() {
+        System.out.println("Square::draw()");
     }
 
     @Override
@@ -17,12 +17,12 @@ public class Square extends Shape implements Type {
     }
 
     @Override
-    public void draw() {
-
+    public float price() {
+        return 32.0f;
     }
 
     @Override
-    public float price() {
-        return 32.0f;
+    public void doodle() {
+
     }
 }

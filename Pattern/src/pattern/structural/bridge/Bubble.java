@@ -1,13 +1,11 @@
 package pattern.structural.bridge;
 
-import main.shape.DrawAPI;
-
 /**
  * Created by sylhare in 2017
  *
- * concrete bridge implementer classes implementing the DrawAPI interface.
+ * concrete bridge implementer classes implementing the CircleAPI interface.
  */
-public class Bubble implements DrawAPI {
+public class Bubble implements CircleAPI {
     @Override
     public void drawCircle(int radius, int x, int y) {
         System.out.println("Drawing Circle [ style: Bubble, radius: " + radius + ", x: " + x + ", " + y + "]");

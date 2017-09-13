@@ -2,7 +2,7 @@ package pattern.creational.factory;
 
 import main.color.Paint;
 import main.shape.Circle;
-import main.shape.Type;
+import main.shape.Draw;
 import main.shape.Rectangle;
 import main.shape.Square;
 
@@ -18,9 +18,9 @@ public class ShapeFactory extends AbstractFactory {
 
     @Override
     /**
-     * use getShape method to get object of type shape
+     * use getShape method to get object of draw shape
      */
-    public Type getShape(String shapeType){
+    public Draw getShape(String shapeType){
         if(shapeType == null){
             return null;
         }

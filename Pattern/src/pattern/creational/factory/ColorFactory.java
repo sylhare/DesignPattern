@@ -11,7 +11,7 @@ import main.color.*;
 public class ColorFactory extends AbstractFactory {
 
     @Override
-    public Type getShape(String shapeType){
+    public Draw getShape(String shapeType){
         return null;
     }
 

@@ -1,6 +1,7 @@
 package main.shape;
 
 import pattern.creational.builder.*;
+import pattern.structural.bridge.CircleAPI;
 
 /**
  * Created by sylhare in 2017.
@@ -8,20 +9,12 @@ import pattern.creational.builder.*;
 public abstract class Shape implements Item, Cloneable {
     private String id;
     protected Integer edge;
-    protected DrawAPI drawAPI; // For Bridge Pattern
+    protected CircleAPI circleAPI; // For Bridge Pattern
 
     /**
      * Default constructor
      */
     protected Shape() {}
-
-    // For Bridge Pattern
-    protected Shape(DrawAPI drawAPI){
-        this.drawAPI = drawAPI;
-    }
-
-    // For Factory Pattern
-    public abstract void draw();
 
     // For Builder Pattern
     @Override
@@ -48,6 +41,13 @@ public abstract class Shape implements Item, Cloneable {
     public Integer getEdge(){
         return edge;
     }
+
+    // For Bridge Pattern
+    protected Shape(CircleAPI circleAPI){
+        this.circleAPI = circleAPI;
+    }
+
+    public abstract void doodle();
 
     // From the cloneable Interface
     public Object clone() {

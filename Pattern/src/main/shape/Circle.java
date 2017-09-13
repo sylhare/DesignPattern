@@ -1,6 +1,8 @@
 package main.shape;
 
-public class Circle extends Shape implements Type {
+import pattern.structural.bridge.CircleAPI;
+
+public class Circle extends Shape implements Draw {
 
     private int x, y, radius;
 
@@ -8,16 +10,15 @@ public class Circle extends Shape implements Type {
         edge = 0;
     }
 
-    public Circle(int x, int y, int radius, DrawAPI drawAPI) {
-        super(drawAPI);
+    public Circle(int x, int y, int radius, CircleAPI circleAPI) {
+        super(circleAPI);
         edge = 0;
         this.x = x;
         this.y = y;
         this.radius = radius;
     }
 
-    public void draw() {
-        drawAPI.drawCircle(radius,x,y);
+    public void doodle() {circleAPI.drawCircle(radius,x,y);
     }
 
     @Override
@@ -31,8 +32,8 @@ public class Circle extends Shape implements Type {
     }
 
     @Override
-    public void type() {
-        System.out.println("Inside Circle::type() method.");
+    public void draw() {
+        System.out.println("Circle::draw()");
     }
 
 }

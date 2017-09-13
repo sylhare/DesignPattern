@@ -1,8 +1,8 @@
-package main.shape;
+package pattern.structural.bridge;
 
 /**
  * Created by sylhare in 2017.
  */
-public interface DrawAPI {
+public interface CircleAPI {
     void drawCircle(int radius, int x, int y);
 }

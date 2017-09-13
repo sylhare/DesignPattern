@@ -5,7 +5,12 @@ import pattern.creational.builder.BuilderDemo;
 import pattern.creational.factory.AbstractFactoryDemo;
 import pattern.creational.factory.FactoryDemo;
 import pattern.creational.singleton.SingletonDemo;
+import pattern.structural.Adapter.AdapterDemo;
+import pattern.structural.Composite.CompositeDemo;
+import pattern.structural.Decorator.DecoratorDemo;
 import pattern.structural.bridge.BridgeDemo;
+import pattern.structural.facade.FacadeDemo;
+import pattern.structural.filter.FilterDemo;
 
 public class Main {
 
@@ -62,7 +67,7 @@ public class Main {
          * functionality of independent or incompatible interfaces.
          * Make an object work with an interface it does not have.
          */
-
+        AdapterDemo.demo();
         space();
 
         /*
@@ -71,6 +76,47 @@ public class Main {
          * Both types of classes can be altered structurally without affecting each other.
          */
         BridgeDemo.demo();
+        space();
+
+        /*
+         * Filter pattern or Criteria pattern is a behavioral pattern that enables developers to filter a set of objects
+         * using different criteria and chaining them in a decoupled way through logical operations.
+         */
+        FilterDemo.demo();
+        space();
+
+        /*
+         * Composite pattern is used where we need to treat a group of objects in similar way as a single object.
+         * Composite pattern composes objects in term of a tree structure to represent part as well as whole hierarchy.
+         */
+        CompositeDemo.demo();
+        space();
+
+        /*
+         * Decorator pattern allows a user to add new functionality to
+         * an existing object without altering its structure.
+         * This pattern creates a decorator class which wraps the original class and provides additional functionality
+         * keeping class methods signature intact.
+         */
+        DecoratorDemo.demo();
+        space();
+
+        /*
+         * Facade pattern hides the complexities of the system and provides an interface to the client
+         * using which the client can access the system.
+         * This pattern involves a single class which provides simplified methods required by client
+         * and delegates calls to methods of existing system classes.
+         */
+        FacadeDemo.demo();
+
+
+        space();
+        System.out.println("Behavioral Patterns");
+        space();
+
+        space();
+        System.out.println(" Patterns");
+        space();
 
 
     }
