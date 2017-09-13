@@ -1,5 +1,7 @@
 package main;
 
+import pattern.creational.Prototype.PrototypeDemo;
+import pattern.creational.builder.BuilderDemo;
 import pattern.creational.factory.AbstractFactoryDemo;
 import pattern.creational.factory.FactoryDemo;
 import pattern.creational.singleton.SingletonDemo;
@@ -26,7 +28,6 @@ public class Main {
          * Each generated factory can give the objects as per the Factory pattern.
         */
         AbstractFactoryDemo.demo();
-
         space();
 
         /*
@@ -36,14 +37,32 @@ public class Main {
         * without need to instantiate the object of the class.
         */
         SingletonDemo.demo();
+        space();
 
         /*
          * Builder pattern builds a complex object using simple objects and using a step by step approach.
          */
+        BuilderDemo.demo();
+        space();
 
+        /*
+         * Prototype pattern refers to creating duplicate object while keeping performance in mind.
+         * This pattern involves implementing a prototype interface which tells to create a clone of the current object.
+         * This pattern is used when creation of object directly is costly (like from big databases)
+         */
+        PrototypeDemo.demo();
+        space();
 
         space();
         System.out.println("Structural Patterns");
+        space();
+
+        /*
+         * This pattern involves a single class which is responsible to join
+         * functionality of independent or incompatible interfaces.
+         * Make an object work with an interface it does not have.
+         */
+
         space();
 
         /*

@@ -1,6 +1,6 @@
 package pattern.creational.factory;
 
-import main.color.Color;
+import main.color.Paint;
 import main.shape.Circle;
 import main.shape.Type;
 import main.shape.Rectangle;
@@ -12,7 +12,7 @@ import main.shape.Square;
 public class ShapeFactory extends AbstractFactory {
 
     @Override
-    Color getColor(String color) {
+    Paint getColor(String color) {
         return null;
     }
 

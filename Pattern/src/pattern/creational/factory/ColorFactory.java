@@ -16,7 +16,7 @@ public class ColorFactory extends AbstractFactory {
     }
 
     @Override
-    Color getColor(String color) {
+    Paint getColor(String color) {
 
         if(color == null){
             return null;

@@ -2,7 +2,7 @@ package pattern.creational.factory;
 
 /**
  * Created by sylhare in 2017.
- * Create a Factory generator/producer class to get factories by passing an information such as Type or Color
+ * Create a Factory generator/producer class to get factories by passing an information such as Type or Paint
  */
 public class FactoryProducer {
     public static AbstractFactory getFactory(String choice){

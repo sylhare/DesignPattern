@@ -1,13 +1,14 @@
 package pattern.creational.factory;
 
-import main.color.Color;
+import main.color.Paint;
 import main.shape.Type;
 
 /**
  * Created by sylhare in 2017.
  * https://www.tutorialspoint.com/design_pattern/abstract_factory_pattern.htm
  */
-public class AbstractFactoryDemo {
+public class AbstractFactoryDemo{
+
     public static void demo() {
 
         //get shape factory
@@ -25,23 +26,23 @@ public class AbstractFactoryDemo {
         //get color factory
         AbstractFactory colorFactory = FactoryProducer.getFactory("COLOR");
 
-        //get an object of Color Red
-        Color color1 = colorFactory.getColor("RED");
+        //get an object of Paint Red
+        Paint paint1 = colorFactory.getColor("RED");
 
         //call fill method of Red
-        color1.fill();
+        paint1.fill();
 
-        //get an object of Color Green
-        Color color2 = colorFactory.getColor("Green");
+        //get an object of Paint Green
+        Paint paint2 = colorFactory.getColor("Green");
 
         //call fill method of Green
-        color2.fill();
+        paint2.fill();
 
-        //get an object of Color Blue
-        Color color3 = colorFactory.getColor("BLUE");
+        //get an object of Paint Blue
+        Paint paint3 = colorFactory.getColor("BLUE");
 
-        //call fill method of Color Blue
-        color3.fill();
+        //call fill method of Paint Blue
+        paint3.fill();
     }
 }
 
