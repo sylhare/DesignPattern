@@ -14,7 +14,8 @@ public abstract class Shape implements Item, Cloneable {
     /**
      * Default constructor
      */
-    protected Shape() {}
+    protected Shape() {
+    }
 
     // For Builder Pattern
     @Override
@@ -36,14 +37,15 @@ public abstract class Shape implements Item, Cloneable {
 
     /**
      * Give the number of Edge in the shape
+     *
      * @return the number of edge
      */
-    public Integer getEdge(){
+    public Integer getEdge() {
         return edge;
     }
 
     // For Bridge Pattern
-    protected Shape(CircleAPI circleAPI){
+    protected Shape(CircleAPI circleAPI) {
         this.circleAPI = circleAPI;
     }
 

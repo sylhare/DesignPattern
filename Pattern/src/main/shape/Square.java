@@ -1,6 +1,9 @@
 package main.shape;
 
-public class Square extends Shape implements Draw {
+import pattern.behavioral.visitor.GeometricElements;
+import pattern.behavioral.visitor.MathVisitor;
+
+public class Square extends Shape implements Draw, GeometricElements {
 
     public Square() {
         edge = 4;
@@ -22,7 +25,11 @@ public class Square extends Shape implements Draw {
     }
 
     @Override
-    public void doodle() {
+    public void doodle() {}
 
+    // For Visitor Pattern
+    @Override
+    public void accept(MathVisitor visitor) {
+        visitor.visit(this);
     }
 }

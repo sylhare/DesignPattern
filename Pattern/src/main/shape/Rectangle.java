@@ -1,11 +1,14 @@
 package main.shape;
 
+import pattern.behavioral.visitor.GeometricElements;
+import pattern.behavioral.visitor.MathVisitor;
+
 /**
  * Created by sylhare in 2017.
  */
-public class Rectangle extends Shape implements Draw {
+public class Rectangle extends Shape implements Draw, GeometricElements {
 
-    public Rectangle(){
+    public Rectangle() {
         edge = 4;
     }
 
@@ -25,7 +28,11 @@ public class Rectangle extends Shape implements Draw {
     }
 
     @Override
-    public void doodle() {
+    public void doodle() {}
 
+    // For Visitor Pattern
+    @Override
+    public void accept(MathVisitor visitor) {
+        visitor.visit(this);
     }
 }

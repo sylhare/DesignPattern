@@ -9,13 +9,13 @@ public class PrototypeDemo {
     public static void demo(){
         ShapeCache.loadCache();
 
-        Shape clonedShape = (Shape) ShapeCache.getShape("1");
+        Shape clonedShape = ShapeCache.getShape("1");
         shapeString(clonedShape);
 
-        Shape clonedShape2 = (Shape) ShapeCache.getShape("2");
+        Shape clonedShape2 = ShapeCache.getShape("2");
         shapeString(clonedShape2);
 
-        Shape clonedShape3 = (Shape) ShapeCache.getShape("3");
+        Shape clonedShape3 = ShapeCache.getShape("3");
         shapeString(clonedShape3);
 
     }

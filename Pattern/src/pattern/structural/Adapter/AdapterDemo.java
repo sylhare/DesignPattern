@@ -1,4 +1,4 @@
-package pattern.structural.Adapter;
+package pattern.structural.adapter;
 
 /**
  * Created by sylhare in 2017.

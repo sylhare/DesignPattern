@@ -1,6 +1,8 @@
 package pattern.structural.filter;
 
 import main.people.*;
+import main.utils.And;
+import main.utils.Or;
 
 import java.util.ArrayList;
 import java.util.List;
