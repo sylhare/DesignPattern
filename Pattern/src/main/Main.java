@@ -1,16 +1,20 @@
 package main;
 
+import pattern.behavioral.chain.ChainDemo;
+import pattern.behavioral.command.CommandDemo;
 import pattern.creational.Prototype.PrototypeDemo;
 import pattern.creational.builder.BuilderDemo;
 import pattern.creational.factory.AbstractFactoryDemo;
 import pattern.creational.factory.FactoryDemo;
 import pattern.creational.singleton.SingletonDemo;
-import pattern.structural.Adapter.AdapterDemo;
-import pattern.structural.Composite.CompositeDemo;
-import pattern.structural.Decorator.DecoratorDemo;
+import pattern.structural.adapter.AdapterDemo;
+import pattern.structural.composite.CompositeDemo;
+import pattern.structural.decorator.DecoratorDemo;
 import pattern.structural.bridge.BridgeDemo;
 import pattern.structural.facade.FacadeDemo;
 import pattern.structural.filter.FilterDemo;
+import pattern.structural.flyweight.FlyweightDemo;
+import pattern.structural.proxy.ProxyDemo;
 
 public class Main {
 
@@ -58,7 +62,7 @@ public class Main {
         PrototypeDemo.demo();
         space();
 
-        space();
+
         System.out.println("Structural Patterns");
         space();
 
@@ -86,14 +90,14 @@ public class Main {
         space();
 
         /*
-         * Composite pattern is used where we need to treat a group of objects in similar way as a single object.
-         * Composite pattern composes objects in term of a tree structure to represent part as well as whole hierarchy.
+         * composite pattern is used where we need to treat a group of objects in similar way as a single object.
+         * composite pattern composes objects in term of a tree structure to represent part as well as whole hierarchy.
          */
         CompositeDemo.demo();
         space();
 
         /*
-         * Decorator pattern allows a user to add new functionality to
+         * decorator pattern allows a user to add new functionality to
          * an existing object without altering its structure.
          * This pattern creates a decorator class which wraps the original class and provides additional functionality
          * keeping class methods signature intact.
@@ -108,15 +112,44 @@ public class Main {
          * and delegates calls to methods of existing system classes.
          */
         FacadeDemo.demo();
-
-
         space();
+
+        /*
+         * Flyweight pattern is primarily used to reduce the number of objects created and
+         * to decrease memory footprint and increase performance.
+         * Flyweight pattern tries to reuse already existing similar kind objects by storing them
+         * and creates new object when no matching object is found.
+         */
+        FlyweightDemo.demo();
+        space();
+
+        /*
+         * In proxy pattern, a class represents functionality of another class.
+         * In proxy pattern, we create object having original object to interface its functionality to outer world.
+         */
+        ProxyDemo.demo();
+        space();
+
+
         System.out.println("Behavioral Patterns");
         space();
 
+        /*
+         * As the name suggests, the chain of responsibility pattern creates a chain of receiver objects for a request.
+         * This pattern decouples sender and receiver of a request based on type of request.
+         * In this pattern, normally each receiver contains reference to another receiver.
+         * If one object cannot handle the request then it passes the same to the next receiver and so on.
+         */
+        ChainDemo.demo();
         space();
-        System.out.println(" Patterns");
-        space();
+
+        /*
+         * A request is wrapped under an object as command and passed to invoker object.
+         * Invoker object looks for the appropriate object which can handle this command and passes the command
+         * to the corresponding object which executes it.
+         */
+        CommandDemo.demo();
+
 
 
     }
